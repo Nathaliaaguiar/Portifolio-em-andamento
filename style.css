@@ -1,9 +1,7 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;800&family=Teko:wght@600&display=swap');
-
 
 * {
   box-sizing: border-box;
@@ -57,7 +55,6 @@ header {
   align-self: center;
 }
 
-
 .menu ul {
   list-style: none;
   position: relative;
@@ -77,8 +74,7 @@ header {
   border-radius: 30px;
   font-family: 'Archivo Narrow';
   font-size: 1.1rem;
- margin-right: 10px;
-
+  margin-right: 10px;
 }
 
 .menu ul ul {
@@ -90,8 +86,6 @@ header {
 .menu ul li:hover ul {
   visibility: visible;
 }
-
-
 
 .menu ul ul li {
   float: none;
@@ -113,14 +107,12 @@ header {
 }
 
 .button_menu:hover {
-
   background-color: #686868;
   transition: 0.3s;
 }
 
 /*CSS Banner*/
-h1,
-h2 {
+h1, h2 {
   font-size: 3rem;
   color: #9678d3;
   font-family: 'Teko', sans-serif;
@@ -137,14 +129,12 @@ main {
   padding: 0 30px;
 }
 
-
 /*CSS sessao_Planos*/
 .sessao_planos {
   margin: auto;
-  /*filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));sombreamento de texto de divs*/
   display: flex;
   flex-direction: column;
-  justify-content: center
+  justify-content: center;
 }
 
 h2 {
@@ -160,112 +150,62 @@ hr {
 
 .planos {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   gap: 40px;
   margin-bottom: 70px;
 }
 
 .planos div {
-  width: 100%;
+  flex: 1 1 30%;
   background-color: #D9D9D9;
   box-shadow: 30px 40px 20px rgba(22, 22, 22, 0.527);
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .planos img {
-
   width: 100%;
-
-}
-
-.plano_life img {
-  height: 577px;
-
-}
-
-.plano_day img {
-  height: 577px;
-  width: 100%;
-
-}
-
-.plano_extreme img {
-  height: 577px;
-  width: 100%;
-
+  height: auto;
+  object-fit: cover;
 }
 
 .planos h3 {
   padding: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-top: -30px;
-  margin-bottom: 50px;
-
+  margin: 0;
   text-align: center;
   font-family: 'Teko', sans-serif;
-  font-size: 3.1rem;
-  background-color: #9678d3;
-}
-
-
-
-.planos h4 {
-  text-align: center;
   font-size: 2.5rem;
-  font-family: 'Open Sans', sans-serif;
-}
-
-.planos small {
-  text-align: center;
-  font-size: 1.5rem;
-  font-family: 'Open Sans', sans-serif;
-  color: #686868;
+  background-color: #9678d3;
+  color: white;
+  width: 100%;
 }
 
 .planos button {
-  height: 100px;
+  height: 50px;
   width: 100%;
   color: #D9D9D9;
   background-color: #9678d3;
   border: none;
-  font-family: 'teko', sans-serif;
-  font-size: 3rem;
+  font-family: 'Teko', sans-serif;
+  font-size: 1.5rem;
   cursor: pointer;
-  display: block;
 }
 
 .planos button:hover {
   background-color: black;
   color: #9678d3;
-  transition: 05ms;
+  transition: 0.5s;
 }
 
-.planos ul {
-  list-style: none;
-}
-
-.plano_day li,
-.plano_life li,
-.plano_extreme li {
-  padding-right: 10px;
-  padding-left: 10px;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.6rem;
-  display: flex;
-  justify-content: space-between;
-}
-
-
-
-/*Css sessao_imagem_academia*/
-
-.sessao_foto_academia {
+/*CSS sessao_hard_skill*/
+.sessao_skill {
   margin: auto;
-  /*filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));sombreamento de texto de divs*/
   display: flex;
   flex-direction: column;
-  justify-content: center
+  justify-content: center;
+  align-items: center;
 }
 
 .fotos {
@@ -273,87 +213,94 @@ hr {
   gap: 20px;
   display: flex;
   justify-content: space-evenly;
-
+  width: 100%;
+  max-width: 800px;
 }
 
 .fotos div {
-  height: 241px;
-  margin: 2px;
-
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  overflow: hidden;
 }
 
 .fotos img {
-  width: 100%;
-  height: 100%;
+  max-width: 150px;
+  max-height: 150px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-/*CSS sessao_descica_quem_somos*/
+.fotos img:hover {
+  transform: scale(0.9);
+  box-shadow: 0 0 20px rgba(150, 120, 211, 0.8);
+}
+
+/* CSS para a seção quem somos */
 .descricao_quem_somos {
   padding: 10px;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
-
+.descricao_texto {
+  width: 50%; /* Ajuste conforme necessário */
+  padding: 10px; /* Adicione padding para espaçamento interno */
+}
 
 .descricao_texto h2 {
-
   font-family: 'Open Sans', sans-serif;
-  font-size: 4rem;
+  font-size: 2.5rem;
   text-shadow: none;
   align-self: flex-start;
-
 }
 
 .descricao_texto p {
   font-family: 'Open Sans', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: #fff;
 }
 
-
-/*IMAGEM DA BONECA*/
 .descricao_foto {
-  height: 480px;
-  width: 580px;
-  margin-top: 100px;
-  
+  width: 50%; /* Ajuste conforme necessário */
+  text-align: center;
+  padding: 10px; /* Adicione padding para espaçamento interno */
 }
+
+.descricao_foto img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
 .descricao_foto img:hover {
-  transform: scale(1.1); /* Aumenta a escala da imagem em 10% quando o mouse está sobre ela */
-}
-
-
-footer {
-  padding: 30px;
+  transform: scale(1.1);
 }
 
 /* Redes Sociais */
-
 .social {
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
   gap: 10px;
-  margin-bottom: 15px;
 }
 
-.social h3 {
+.social h4 {
   font-family: 'Teko', sans-serif;
-  color: #EBC42A;
-  font-size: 60px;
-  text-shadow: 2px 2px 2px black;
-  margin-top: 100px;
+  color: #9678d3;
+  font-size: 35px;
 }
 
-.social p {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 18px;
-  color: white;
+.social-icons {
+  display: flex;
+  gap: 30px;
 }
 
-.social a {
+.social-icons a {
   display: inline-flex;
   background-color: #2B2B2B;
   color: white;
@@ -362,60 +309,55 @@ footer {
   border-radius: 50%;
   justify-content: center;
   align-items: center;
-  transition: 0.4s;
+  transition: background-color 0.4s, transform 0.4s, box-shadow 0.4s;
   font-size: 24px;
-  margin: 0px 15px 15px;
   text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.social a:hover {
-  background-color: #9678d3;
-}
-
-.social a:hover {
+.social-icons a:hover {
   transform: scale(1.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-/* Footer  */
+.social-icons a i {
+  color: currentColor;
+}
 
+/* Footer */
 footer {
   background-color: #2B2B2B;
   width: 100%;
-  height: 300px;
+  padding: 50px 0;
 }
 
 .info {
   display: flex;
-  flex-direction: row;
-  align-items: baseline;
+  flex-wrap: wrap;
   justify-content: space-around;
-  padding: 50px;
+  align-items: center;
+  text-align: center;
 }
 
 .info div {
-  width: 50%;
+  flex: 1 1 30%;
+  margin-bottom: 20px;
 }
 
 .info h4 {
   font-family: 'Teko', sans-serif;
   color: #9678d3;
-  font-size: 35px;
+  font-size: 1.5rem;
 }
 
-.info a,
-.info p {
+.info a, .info p {
   font-family: 'Open Sans', sans-serif;
-  font-size: 15px;
+  font-size: 0.875rem;
   color: white;
   text-decoration: none;
 }
 
-.info a:hover {
-  color: #9678d3;
-  transition: 0.5s;
-}
-
-.info p:hover {
+.info a:hover, .info p:hover {
   color: #9678d3;
   transition: 0.5s;
 }
@@ -425,7 +367,6 @@ footer {
 }
 
 /* Scrollbar */
-
 body::-webkit-scrollbar {
   width: 17px;
 }
@@ -440,187 +381,125 @@ body::-webkit-scrollbar-thumb {
   border: 3px solid #9678d3;
 }
 
-
-/* Responsividade Footer  */
-
-@media (max-width: 800px) {
-  .info {
+/* Responsividade Footer */
+@media (max-width: 600px) {
+  .nav-container, .footer {
     flex-direction: column;
-    align-items: center;
+    text-align: center;
   }
 
-  footer {
-    height: 750px;
-  }
-}
-
-/* Responsividade Página inicial  */
-
-@media(min-width: 1431px) {
-  .banner h1 {
-    width: 1000px;
-    margin-right: 70px;
-    font-size: 7rem;
+  .menu ul li {
+    display: block;
+    margin: 5px 0;
   }
 
-  h2 {
-    font-size: 5rem;
-  }
-
-  .planos div {
-    height: 623px;
-    width: 417px;
-
-
-  }
-
-  .fotos div {
-    height: 341px;
-  }
-
-}
-
-
-
-
-@media (max-width: 1147px) {
-  .container {
-    display: flex;
-    justify-content: center;
-  }
-
-
-  .banner h1 {
-    width: 600px;
-    font-size: 4rem;
-    margin: 0px;
-  }
-
-  h2 {
-    font-size: 4rem;
-  }
-
-  .planos {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .planos div {
-    width: 400px;
-    margin-bottom: 120px;
-  }
-
-  /*CSS sessao_foto_academia */
-
-
-  .sessao_foto_academia {
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center
-  }
-
-  .fotos {
-    margin-bottom: 50px;
-
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .fotos .foto_area2 {
-    display: none;
-  }
-
-  /*CSS sessao_descica_quem_somos*/
   .descricao_quem_somos {
-    display: flex;
-    justify-content: center;
-    flex-direction: column-reverse;
-  }
-
-  .descricao_texto {
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-    margin: 20px;
-  }
-
-  .descricao_texto h2 {
-    font-size: 2.5rem;
-    align-self: center;
-    margin-bottom: 10px;
-  }
-
-  .descricao_texto p {
-    margin-bottom: 20px;
-  }
-
-  .descricao_texto button {
-    margin-bottom: 30px;
+    flex-direction: column;
   }
 
   .descricao_foto {
-    height: auto;
-    width: auto;
-    align-self: center;
-  }
-
-
-
-
-
-
-@media (max-width: 691px) {
-
-  .menu ul {
-    list-style: none;
-    position: absolute;
-    top: 70px;
-    width: 113px;
-  }
-
-
-  .banner h1 {
-    width: auto;
-    height: auto;
-    font-size: 1.8rem;
-    margin: 0px;
-  }
-
-  .fotos div {
-    height: 180px;
-  }
-
-  .planos div {
-
-    width: 300px;
-  }
-
-  h2 {
-    font-size: 2rem;
+    width: 100%;
+    text-align: center;
   }
 
   .descricao_foto img {
+    width: 80%;
     height: auto;
-    width: 100vw;
-    align-self: center;
   }
 
-  .info {
-    height: 750px;
-    flex-direction: column;
-    align-items: flex-start; /* Alterado para flex-start para alinhar os itens no topo */
-    padding: 0px;
-  }
-  
-
-  footer {
-    height: 760px;
+  .sessao_planos, .sessao_skill {
     padding: 10px;
   }
 
+  .planos div, .fotos div {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .nav-container, .footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .menu ul {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .menu ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+
+  .descricao_quem_somos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .descricao_foto {
+    width: 40%;
+  }
+
+  .descricao_foto img {
+    width: 100%;
+    height: auto;
+  }
+
+  .sessao_planos, .sessao_skill {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .planos div, .fotos div {
+    width: 48%;
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .nav-container, .footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .menu ul {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .menu ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+
+  .descricao_quem_somos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .descricao_foto {
+    width: 40%;
+  }
+
+  .descricao_foto img {
+    width: 100%;
+    height: auto;
+  }
+
+  .sessao_planos, .sessao_skill {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .planos div, .fotos div {
+    width: 30%;
+    margin-bottom: 10px;
+  }
 }
