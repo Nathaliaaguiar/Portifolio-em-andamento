@@ -23,7 +23,7 @@ Como Contribuir
 Atualmente, este projeto é um exemplo pessoal e não estou aceitando contribuições diretas. No entanto, sinta-se à vontade para bifurcar este repositório e adaptá-lo para suas próprias necessidades.
 
 Como Usar
-Clone este repositório: git clone https://github.com/seu-usuario/meu-portfolio.git
+Clone este repositório: git clone [https://github.com/seu-usuario/meu-portfolio.git](https://github.com/Nathaliaaguiar/Portifolio-em-andamento/tree/main)
 Abra o arquivo index.html no seu navegador web.
 Contato
 Website: [www.seudominio.com](https://nathaliaaguiar.github.io/Portifolio-em-andamento/)
